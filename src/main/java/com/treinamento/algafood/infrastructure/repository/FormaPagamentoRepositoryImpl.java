@@ -1,18 +1,21 @@
-package com.treinamento.infrastructure.repository;
+package com.treinamento.algafood.infrastructure.repository;
 
 import com.treinamento.algafood.domain.model.FormaPagamento;
 import com.treinamento.algafood.domain.repository.FormaPagamentoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class FormaPagamentoRepositoryImpl implements FormaPagamentoRepository {
+
     @Override
-    public List<FormaPagamento> buscarTodos() {
+    public List<FormaPagamento> listar() {
         return null;
     }
 
     @Override
-    public FormaPagamento buscarPorId(Long id) {
+    public FormaPagamento listarPorId(Long id) {
         return null;
     }
 

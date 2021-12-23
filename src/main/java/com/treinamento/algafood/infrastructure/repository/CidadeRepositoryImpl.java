@@ -1,18 +1,21 @@
-package com.treinamento.infrastructure.repository;
+package com.treinamento.algafood.infrastructure.repository;
 
 import com.treinamento.algafood.domain.model.Cidade;
 import com.treinamento.algafood.domain.repository.CidadeRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class CidadeRepositoryImpl implements CidadeRepository {
+
     @Override
-    public List<Cidade> buscarTodos() {
+    public List<Cidade> listar() {
         return null;
     }
 
     @Override
-    public Cidade buscarPorId(Long id) {
+    public Cidade listarPorId(Long id) {
         return null;
     }
 

@@ -1,20 +1,21 @@
-package com.treinamento.infrastructure.repository;
+package com.treinamento.algafood.infrastructure.repository;
 
-import com.treinamento.algafood.domain.model.Cidade;
 import com.treinamento.algafood.domain.model.Estado;
-import com.treinamento.algafood.domain.repository.CidadeRepository;
 import com.treinamento.algafood.domain.repository.EstadoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class EstadoRepositoryImpl implements EstadoRepository {
+
     @Override
-    public List<Estado> buscarTodos() {
+    public List<Estado> listar() {
         return null;
     }
 
     @Override
-    public Estado buscarPorId(Long id) {
+    public Estado listarPorId(Long id) {
         return null;
     }
 

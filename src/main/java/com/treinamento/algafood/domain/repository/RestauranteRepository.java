@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RestauranteRepository {
 
-    List<Cozinha> listarTodos();
+    List<Cozinha> listarT();
     Cozinha listarPorId(Long id);
     Cozinha adicionar();
     void remover(Cozinha cozinha);

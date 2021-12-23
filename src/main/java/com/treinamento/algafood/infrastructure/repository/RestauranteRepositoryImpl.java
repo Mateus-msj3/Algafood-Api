@@ -1,14 +1,16 @@
-package com.treinamento.infrastructure.repository;
+package com.treinamento.algafood.infrastructure.repository;
 
 import com.treinamento.algafood.domain.model.Cozinha;
-import com.treinamento.algafood.domain.repository.CozinhaRepository;
+import com.treinamento.algafood.domain.repository.RestauranteRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public class CozinhaRepositoryImpl implements CozinhaRepository {
+@Repository
+public class RestauranteRepositoryImpl implements RestauranteRepository {
 
     @Override
-    public List<Cozinha> listarTodos() {
+    public List<Cozinha> listarT() {
         return null;
     }
 

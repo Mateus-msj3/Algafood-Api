@@ -4,10 +4,10 @@ import com.treinamento.algafood.domain.model.Cozinha;
 
 import java.util.List;
 
-public interface CozinhaRepository {
+public interface CozinhaRepository{
 
-    List<Cozinha> listarTodos();
+    List<Cozinha> listar();
     Cozinha listarPorId(Long id);
-    Cozinha adicionar();
+    Cozinha salvar();
     void remover(Cozinha cozinha);
 }

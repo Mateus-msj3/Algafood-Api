@@ -1,6 +1,6 @@
 package com.treinamento.algafood.infrastructure.repository;
 
-import com.treinamento.algafood.domain.model.Cozinha;
+import com.treinamento.algafood.domain.model.Restaurante;
 import com.treinamento.algafood.domain.repository.RestauranteRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,22 +10,22 @@ import java.util.List;
 public class RestauranteRepositoryImpl implements RestauranteRepository {
 
     @Override
-    public List<Cozinha> listarT() {
+    public List<Restaurante> listar() {
         return null;
     }
 
     @Override
-    public Cozinha listarPorId(Long id) {
+    public Restaurante listarPorId(Long id) {
         return null;
     }
 
     @Override
-    public Cozinha adicionar() {
+    public Restaurante adicionar() {
         return null;
     }
 
     @Override
-    public void remover(Cozinha cozinha) {
+    public void remover(Restaurante restaurante) {
 
     }
 }

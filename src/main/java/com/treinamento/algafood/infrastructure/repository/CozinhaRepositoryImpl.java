@@ -26,7 +26,7 @@ public class CozinhaRepositoryImpl implements CozinhaRepository{
     }
 
     @Override
-    public void remover(Cozinha cozinha) {
+    public void remover(Long id) {
 
     }
 }

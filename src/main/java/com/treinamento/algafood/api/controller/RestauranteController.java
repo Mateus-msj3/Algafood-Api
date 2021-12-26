@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/restuarantes")
@@ -24,15 +25,15 @@ public class RestauranteController {
 
     @GetMapping
     public List<Restaurante> listar() {
-        return restauranteRepository.listar();
+        return restauranteRepository.findAll();
     }
 
     @GetMapping("/{restauranteId}")
     public ResponseEntity<Restaurante> buscarPorId (@PathVariable Long restauranteId) {
-        Restaurante restaurante =  restauranteRepository.listarPorId(restauranteId);
+        Optional<Restaurante> restaurante =  restauranteRepository.findById(restauranteId);
 
-        if(restaurante != null) {
-            return ResponseEntity.ok(restaurante);
+        if(restaurante.isPresent()) {
+            return ResponseEntity.ok(restaurante.get());
         }
 
         return ResponseEntity.notFound().build();
@@ -55,7 +56,7 @@ public class RestauranteController {
     public ResponseEntity<?> atualizar(@PathVariable Long restauranteId, @RequestBody Restaurante restaurante) {
 
         try {
-            Restaurante restauranteAtual = restauranteRepository.listarPorId(restauranteId);
+            Restaurante restauranteAtual = restauranteRepository.findById(restauranteId).orElse(null);
 
             if (restauranteAtual != null) {
                 BeanUtils.copyProperties(restaurante, restauranteAtual, "id");
@@ -65,6 +66,7 @@ public class RestauranteController {
             }
 
             return ResponseEntity.notFound().build();
+
         } catch (EntidadeNaoEncontradaException e) {
             return ResponseEntity.badRequest()
                     .body(e.getMessage());

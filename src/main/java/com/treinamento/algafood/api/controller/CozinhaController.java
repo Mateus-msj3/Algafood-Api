@@ -45,7 +45,7 @@ public class CozinhaController {
         return cadastroCozinhaService.salvar(cozinha);
     }
 
-    @PutMapping("/{cozinhasId}")
+    @PutMapping("/{cozinhaId}")
     public ResponseEntity<Cozinha> atualizar(@PathVariable Long cozinhaId, @RequestBody Cozinha cozinha) {
         Optional<Cozinha> cozinhaAtual = cozinhaRepository.findById(cozinhaId);
 
@@ -59,7 +59,7 @@ public class CozinhaController {
         return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/cozinhaId")
+    @DeleteMapping("/{cozinhaId}")
     public ResponseEntity<Cozinha> remover(@PathVariable Long cozinhaId) {
         try{
             cadastroCozinhaService.excluir(cozinhaId);
